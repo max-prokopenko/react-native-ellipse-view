@@ -1,11 +1,15 @@
 # react-native-ellipse-view
 
-Own implementation of https://github.com/everdrone/react-native-super-ellipse-mask
+View smoothly rounded with Bézier curve for React Native.
 
 ## Installation
 
 ```sh
 npm install react-native-ellipse-view
+```
+or
+```sh
+yarn add react-native-ellipse-view
 ```
 
 ## Usage
@@ -15,7 +19,10 @@ import EllipseView from "react-native-ellipse-view";
 
 // ...
 
-const result = await EllipseView.multiply(3, 7);
+<EllipseView style={styles.ellipseViewContainer}>
+    <Image source={require('./example.jpeg')} style={styles.avatar} />
+</EllipseView>
+
 ```
 
 ## Contributing

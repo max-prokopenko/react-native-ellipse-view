@@ -1,12 +1,26 @@
-import { requireNativeComponent, ViewStyle } from 'react-native';
+import React from 'react';
+import {
+  Platform,
+  requireNativeComponent,
+  View,
+  ViewStyle,
+} from 'react-native';
 
-type EllipseViewProps = {
-  color: string;
-  style: ViewStyle;
-};
+type EllipseViewProps = {};
 
-export const EllipseViewViewManager = requireNativeComponent<EllipseViewProps>(
-  'EllipseViewView'
+const EllipseViewManager = requireNativeComponent<EllipseViewProps>(
+  'EllipseView'
 );
 
-export default EllipseViewViewManager;
+const EllipseViewComponent = (props: {
+  children: React.ReactNode;
+  style?: ViewStyle;
+}) => {
+  if (Platform.OS === 'ios') {
+    return <EllipseViewManager {...props} />;
+  } else {
+    return <View {...props} />;
+  }
+};
+
+export default EllipseViewComponent;
