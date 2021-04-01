@@ -12,7 +12,7 @@ const EllipseViewManager = requireNativeComponent<EllipseViewProps>(
   'EllipseView'
 );
 
-const EllipseViewComponent = (props: {
+const EllipseView = (props: {
   children: React.ReactNode;
   style?: ViewStyle;
 }) => {
@@ -23,4 +23,4 @@ const EllipseViewComponent = (props: {
   }
 };
 
-export default EllipseViewComponent;
+export default EllipseView;
