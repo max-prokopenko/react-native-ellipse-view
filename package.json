@@ -1,5 +1,5 @@
 {
-  "name": "react-native-ellipse-view",
+  "name": "@lowkey/react-native-ellipse-view",
   "version": "0.1.0",
   "description": "Rounded view for React Native",
   "main": "lib/commonjs/index",
