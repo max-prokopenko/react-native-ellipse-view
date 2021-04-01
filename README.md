@@ -18,7 +18,7 @@ yarn add @lowkey/react-native-ellipse-view
 ## Usage
 
 ```js
-import EllipseView from "react-native-ellipse-view";
+import EllipseView from "@lowkey/react-native-ellipse-view";
 
 // ...
 
