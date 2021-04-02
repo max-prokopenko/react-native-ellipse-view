@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { StyleSheet, View, Image } from 'react-native';
-import EllipseView from 'react-native-ellipse-view';
+import EllipseView from '@lowkey/react-native-ellipse-view';
 
 export default function App() {
   return (
@@ -25,22 +25,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 150,
-    backgroundColor: '#fff',
-  },
-  box: {
-    width: 400,
-    height: 400,
-    backgroundColor: 'green',
-    opacity: 1,
-  },
-  box2: {
-    ...StyleSheet.absoluteFillObject,
-    width: 400,
-    height: 400,
-    backgroundColor: 'green',
-    justifyContent: 'center',
-    alignItems: 'center',
-    opacity: 0,
+    backgroundColor: 'red',
   },
   ellipseView: {
     marginTop: 30,

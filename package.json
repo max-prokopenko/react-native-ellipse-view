@@ -1,6 +1,6 @@
 {
   "name": "@lowkey/react-native-ellipse-view",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Rounded view for React Native",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -34,7 +34,11 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "avatar",
+    "rounded",
+    "view",
+    "Bézier curve",
+    "ellipse"
   ],
   "repository": "https://github.com/max-prokopenko/react-native-ellipse-view",
   "author": "Max Prokopenko <max.prokopenko@hotmail.com> (https://github.com/max-prokopenko)",
