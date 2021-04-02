@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     paddingTop: 150,
-    backgroundColor: 'red',
+    backgroundColor: '#fff',
   },
   ellipseView: {
     marginTop: 30,
