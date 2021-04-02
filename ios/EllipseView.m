@@ -51,7 +51,7 @@
         last = CGPointMake(last.x + w * 0.5, last.y - (h * 0.5));
         [path addCurveToPoint:CGPointMake(last.x + w * 0.5, last.y + h * 0.5)
                 controlPoint1:CGPointMake(last.x + w * 0.25, last.y)
-            controlPoint2:CGPointMake(last.x + w * 0.5, last.y + h * 0.06)];
+            controlPoint2:CGPointMake(last.x + w * 0.5, last.y + h * 0.04)];
 
          // RIGHT/BOTTOM curve
         last = CGPointMake(last.x + w * 0.5, last.y + (h * 0.5));

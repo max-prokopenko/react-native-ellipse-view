@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     height: 120,
   },
   bigAvatar: {
-    width: 220,
-    height: 220,
+    width: 380,
+    height: 380,
   },
 });
