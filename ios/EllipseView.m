@@ -44,26 +44,26 @@
 
         // LEFT/TOP curve 
         [path addCurveToPoint:CGPointMake(last.x + w * 0.5, last.y - (h * 0.5))
-                controlPoint1:CGPointMake(last.x, last.y - (h * 0.5 - h * 0.04))
-            controlPoint2:CGPointMake(last.x + w * 0.25, last.y - h * 0.5)];
+                controlPoint1:CGPointMake(last.x, last.y - (h * 0.345))
+            controlPoint2:CGPointMake(last.x + w * 0.155, last.y - h * 0.5)];
 
         // TOP/RIGHT curve
         last = CGPointMake(last.x + w * 0.5, last.y - (h * 0.5));
         [path addCurveToPoint:CGPointMake(last.x + w * 0.5, last.y + h * 0.5)
-                controlPoint1:CGPointMake(last.x + w * 0.25, last.y)
-            controlPoint2:CGPointMake(last.x + w * 0.5, last.y + h * 0.04)];
+                controlPoint1:CGPointMake(last.x + w * 0.345, last.y)
+            controlPoint2:CGPointMake(last.x + w * 0.5, last.y + h * 0.155)];
 
          // RIGHT/BOTTOM curve
         last = CGPointMake(last.x + w * 0.5, last.y + (h * 0.5));
         [path addCurveToPoint:CGPointMake(last.x - w * 0.5, last.y + h * 0.5)
-                controlPoint1:CGPointMake(last.x, last.y + (h * 0.5 - h * 0.04))
-            controlPoint2:CGPointMake(last.x - w * 0.25, last.y + h * 0.5)];
+                controlPoint1:CGPointMake(last.x, last.y + (h * 0.345))
+            controlPoint2:CGPointMake(last.x - w * 0.155, last.y + h * 0.5)];
 
          // BOTTOM/LEFT curve
         last = CGPointMake(last.x - w * 0.5, last.y + (h * 0.5));
         [path addCurveToPoint:CGPointMake(last.x - w * 0.5, last.y - h * 0.5)
-                controlPoint1:CGPointMake(last.x - w * 0.25, last.y)
-            controlPoint2:CGPointMake(last.x - w * 0.5, last.y - h * 0.04)];
+                controlPoint1:CGPointMake(last.x - w * 0.345, last.y)
+            controlPoint2:CGPointMake(last.x - w * 0.5, last.y - h * 0.155)];
 
     [path closePath];
     // !edit path
