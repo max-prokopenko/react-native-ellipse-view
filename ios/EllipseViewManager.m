@@ -8,16 +8,17 @@
 
 @synthesize bridge = _bridge;
 
+RCT_EXPORT_VIEW_PROPERTY(backgroundColorParam, NSString)
+RCT_EXPORT_VIEW_PROPERTY(borderColorParam, NSString)
+RCT_EXPORT_VIEW_PROPERTY(borderWidthParam, double);
+
 RCT_EXPORT_MODULE();
 
 - (UIView *)view
 {
-    return [[EllipseView alloc] init];
+    EllipseView *ellipseView = [[EllipseView alloc] init];
+    return ellipseView;
 }
 
-RCT_EXPORT_VIEW_PROPERTY(topLeft, CGFloat)
-RCT_EXPORT_VIEW_PROPERTY(topRight, CGFloat)
-RCT_EXPORT_VIEW_PROPERTY(bottomRight, CGFloat)
-RCT_EXPORT_VIEW_PROPERTY(bottomLeft, CGFloat)
 
 @end

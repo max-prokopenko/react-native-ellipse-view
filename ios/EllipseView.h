@@ -7,4 +7,12 @@
 - (instancetype)initWithFrame:(CGRect)frame
 NS_DESIGNATED_INITIALIZER;
 
+- (UIColor *)colorFromHexString:(NSString *)hexString;
+
+- (void) setBorderWidthParam:(double)borderWidth;
+
+- (void) setBorderColorParam:(NSString *)borderColor;
+
+- (void) setBackgroundColorParam:(NSString *)backgroundColor;
+
 @end

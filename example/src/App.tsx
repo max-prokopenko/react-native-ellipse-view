@@ -7,13 +7,10 @@ export default function App() {
   return (
     <View style={styles.container}>
       <EllipseView style={styles.ellipseView}>
-        <Image source={require('./example.jpeg')} style={styles.smallAvatar} />
+        <Image source={require('./example.jpeg')} style={styles.big} />
       </EllipseView>
       <EllipseView style={styles.ellipseView}>
-        <Image source={require('./example.jpeg')} style={styles.mediumAvatar} />
-      </EllipseView>
-      <EllipseView style={styles.ellipseView}>
-        <Image source={require('./example.jpeg')} style={styles.bigAvatar} />
+        <View style={styles.big} />
       </EllipseView>
     </View>
   );
@@ -23,22 +20,16 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'flex-start',
-    paddingTop: 150,
+    justifyContent: 'center',
     backgroundColor: '#fff',
   },
   ellipseView: {
-    marginTop: 30,
+    marginTop: 10,
+    borderWidth: 50,
+    borderColor: '#ff00ff',
+    backgroundColor: '#ffa0f0',
   },
-  smallAvatar: {
-    width: 60,
-    height: 60,
-  },
-  mediumAvatar: {
-    width: 120,
-    height: 120,
-  },
-  bigAvatar: {
+  big: {
     width: 380,
     height: 380,
   },
