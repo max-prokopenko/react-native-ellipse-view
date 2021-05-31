@@ -1,15 +1,17 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Image } from 'react-native';
+import { StyleSheet, View, Image, TouchableOpacity } from 'react-native';
 import EllipseView from '@lowkey/react-native-ellipse-view';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <EllipseView style={styles.ellipseView}>
-        <Image source={require('./example.jpeg')} style={styles.big} />
-      </EllipseView>
-      <EllipseView style={styles.ellipseView}>
+      <TouchableOpacity>
+        <EllipseView style={styles.ellipseView}>
+          <Image source={require('./example.jpeg')} style={styles.big} />
+        </EllipseView>
+      </TouchableOpacity>
+      <EllipseView style={styles.ellipseViewDahsed}>
         <View style={styles.big} />
       </EllipseView>
     </View>
@@ -25,12 +27,19 @@ const styles = StyleSheet.create({
   },
   ellipseView: {
     marginTop: 10,
-    borderWidth: 50,
+    borderWidth: 5,
+    borderColor: '#ff00ff',
+    backgroundColor: '#ffa0f0',
+  },
+  ellipseViewDahsed: {
+    marginTop: 10,
+    borderWidth: 5,
+    borderStyle: 'dashed',
     borderColor: '#ff00ff',
     backgroundColor: '#ffa0f0',
   },
   big: {
-    width: 380,
-    height: 380,
+    width: 170,
+    height: 170,
   },
 });

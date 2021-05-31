@@ -105,6 +105,12 @@
     mask.lineWidth = borderWidth;
 }
 
+- (void) setBorderStyleParam:(NSString *)borderStyle {
+    if ([borderStyle isEqualToString:@"dashed"]) {
+        borderLayer.lineDashPattern = @[@5, @5];
+    }
+}
+
 - (void) setBorderColorParam:(NSString *)borderColor {
     borderLayer.strokeColor = [self colorFromHexString:borderColor].CGColor;    
 }

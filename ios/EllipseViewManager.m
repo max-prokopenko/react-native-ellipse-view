@@ -10,6 +10,7 @@
 
 RCT_EXPORT_VIEW_PROPERTY(backgroundColorParam, NSString)
 RCT_EXPORT_VIEW_PROPERTY(borderColorParam, NSString)
+RCT_EXPORT_VIEW_PROPERTY(borderStyleParam, NSString)
 RCT_EXPORT_VIEW_PROPERTY(borderWidthParam, double);
 
 RCT_EXPORT_MODULE();

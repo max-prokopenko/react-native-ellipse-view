@@ -10,6 +10,7 @@ type EllipseViewProps = {
   borderWidthParam: number | undefined;
   borderColorParam: string | undefined;
   backgroundColorParam: string | undefined;
+  borderStyleParam: string | undefined;
 };
 
 const EllipseViewManager = requireNativeComponent<EllipseViewProps>(
@@ -35,6 +36,7 @@ const EllipseView = (props: {
           borderWidthParam={props.style?.borderWidth}
           borderColorParam={props.style?.borderColor}
           backgroundColorParam={props.style?.backgroundColor}
+          borderStyleParam={props.style?.borderStyle}
         />
       </View>
     );

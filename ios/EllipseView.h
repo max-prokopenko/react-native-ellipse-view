@@ -15,4 +15,6 @@ NS_DESIGNATED_INITIALIZER;
 
 - (void) setBackgroundColorParam:(NSString *)backgroundColor;
 
+- (void) setBorderStyleParam:(NSString *)borderStyle;
+
 @end
