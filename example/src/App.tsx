@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffa0f0',
   },
   big: {
-    width: 170,
-    height: 170,
+    width: 40,
+    height: 40,
   },
 });

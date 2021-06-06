@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Platform,
   requireNativeComponent,
+  StyleSheet,
   View,
   ViewStyle,
 } from 'react-native';
@@ -20,8 +21,10 @@ const EllipseViewManager = requireNativeComponent<EllipseViewProps>(
 const EllipseView = (props: {
   children: React.ReactNode;
   style?: ViewStyle;
+  borderRadius?: number;
 }) => {
   const containerStyle = Object.assign({}, props.style);
+  const borderRadius = props.borderRadius ? props.borderRadius : 20;
 
   if (Platform.OS === 'ios') {
     // Cleanup the container styles
@@ -41,8 +44,25 @@ const EllipseView = (props: {
       </View>
     );
   } else {
-    return <View {...props} />;
+    return (
+      <View
+        {...props}
+        style={[
+          props.style,
+          styles.androidContainer,
+          {
+            borderRadius,
+          },
+        ]}
+      />
+    );
   }
 };
+
+const styles = StyleSheet.create({
+  androidContainer: {
+    overflow: 'hidden',
+  },
+});
 
 export default EllipseView;
