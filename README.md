@@ -31,7 +31,7 @@ import EllipseView from "@lowkey/react-native-ellipse-view";
 
 | Property  | Type | Default | Required | Description |
 | ------------- |:-------------:|:-------------:|:-------------:|:-------------:|
-| roundness      | number (0-1)     |  0.45      | false      | Changes the "borderRadius" of the ellipse |
+| `roundness`      | number (0-1)     |  0.45      | false      | Changes the "borderRadius" of the ellipse |
 
 ## Contributing
 
