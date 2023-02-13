@@ -1,4 +1,3 @@
-
 # react-native-ellipse-view
 
 View smoothly rounded with Bézier curve for React Native.
@@ -27,6 +26,12 @@ import EllipseView from "@lowkey/react-native-ellipse-view";
 </EllipseView>
 
 ```
+
+## Props
+
+| Property  | Type | Default | Required | Description |
+| ------------- |:-------------:|:-------------:|:-------------:|:-------------:|
+| roundness      | number (0-1)     |  0.45      | false      | Changes the "borderRadius" of the ellipse |
 
 ## Contributing
 

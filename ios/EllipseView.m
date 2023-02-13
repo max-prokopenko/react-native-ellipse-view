@@ -20,7 +20,6 @@
 - (instancetype)initWithFrame:(CGRect)frame
 {
     if ((self = [super initWithFrame:frame])) {
-
         mask = [[CAShapeLayer alloc] init];
         mask.frame = frame;
         path = [[UIBezierPath alloc] init];
@@ -51,33 +50,36 @@
         [super drawRect:rect];
         
         CGFloat w = rect.size.width; 
-        CGFloat h = rect.size.height; 
+        CGFloat h = rect.size.height;
+    
+        CGFloat cPoint1Coeff = 0.345;
+        CGFloat cPoint2Coeff = cPoint1Coeff * coeff;
 
         CGPoint last = CGPointMake(rect.origin.x, rect.origin.y + h * 0.5);
         [path moveToPoint:CGPointMake(last.x, last.y)];
 
         // LEFT/TOP curve 
         [path addCurveToPoint:CGPointMake(last.x + w * 0.5, last.y - (h * 0.5))
-                controlPoint1:CGPointMake(last.x, last.y - (h * 0.345))
-            controlPoint2:CGPointMake(last.x + w * 0.155, last.y - h * 0.5)];
+                controlPoint1:CGPointMake(last.x, last.y - (h * cPoint1Coeff))
+            controlPoint2:CGPointMake(last.x + w * cPoint2Coeff, last.y - h * 0.5)];
 
         // TOP/RIGHT curve
         last = CGPointMake(last.x + w * 0.5, last.y - (h * 0.5));
         [path addCurveToPoint:CGPointMake(last.x + w * 0.5, last.y + h * 0.5)
-                controlPoint1:CGPointMake(last.x + w * 0.345, last.y)
-            controlPoint2:CGPointMake(last.x + w * 0.5, last.y + h * 0.155)];
+                controlPoint1:CGPointMake(last.x + w * cPoint1Coeff, last.y)
+            controlPoint2:CGPointMake(last.x + w * 0.5, last.y + h * cPoint2Coeff)];
 
          // RIGHT/BOTTOM curve
         last = CGPointMake(last.x + w * 0.5, last.y + (h * 0.5));
         [path addCurveToPoint:CGPointMake(last.x - w * 0.5, last.y + h * 0.5)
-                controlPoint1:CGPointMake(last.x, last.y + (h * 0.345))
-            controlPoint2:CGPointMake(last.x - w * 0.155, last.y + h * 0.5)];
+                controlPoint1:CGPointMake(last.x, last.y + (h * cPoint1Coeff))
+            controlPoint2:CGPointMake(last.x - w * cPoint2Coeff, last.y + h * 0.5)];
 
          // BOTTOM/LEFT curve
         last = CGPointMake(last.x - w * 0.5, last.y + (h * 0.5));
         [path addCurveToPoint:CGPointMake(last.x - w * 0.5, last.y - h * 0.5)
-                controlPoint1:CGPointMake(last.x - w * 0.345, last.y)
-            controlPoint2:CGPointMake(last.x - w * 0.5, last.y - h * 0.155)];
+                controlPoint1:CGPointMake(last.x - w * cPoint1Coeff, last.y)
+            controlPoint2:CGPointMake(last.x - w * 0.5, last.y - h * cPoint2Coeff)];
 
     [path closePath];
 
@@ -103,6 +105,10 @@
 - (void) setBorderWidthParam:(double)borderWidth {
     borderLayer.lineWidth = borderWidth;
     mask.lineWidth = borderWidth;
+}
+
+- (void) setCoeffParam:(double)roundnessCoeff {
+    coeff = roundnessCoeff;
 }
 
 - (void) setBorderStyleParam:(NSString *)borderStyle {

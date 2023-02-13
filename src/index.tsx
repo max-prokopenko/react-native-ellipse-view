@@ -12,6 +12,7 @@ type EllipseViewProps = {
   borderColorParam: string | undefined;
   backgroundColorParam: string | undefined;
   borderStyleParam: string | undefined;
+  coeffParam: number | undefined;
 };
 
 const EllipseViewManager = requireNativeComponent<EllipseViewProps>(
@@ -22,9 +23,14 @@ const EllipseView = (props: {
   children: React.ReactNode;
   style?: ViewStyle;
   borderRadius?: number;
+  roundness?: number;
 }) => {
   const containerStyle = Object.assign({}, props.style);
   const borderRadius = props.borderRadius ? props.borderRadius : 20;
+  const coeffParam =
+    props.roundness && props.roundness > 0 && props.roundness <= 1
+      ? props.roundness
+      : 0.45;
 
   if (Platform.OS === 'ios') {
     // Cleanup the container styles
@@ -40,6 +46,7 @@ const EllipseView = (props: {
           borderColorParam={props.style?.borderColor}
           backgroundColorParam={props.style?.backgroundColor}
           borderStyleParam={props.style?.borderStyle}
+          coeffParam={coeffParam}
         />
       </View>
     );

@@ -7,7 +7,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <TouchableOpacity>
-        <EllipseView style={styles.ellipseView}>
+        <EllipseView style={styles.ellipseView} roundness={0.45}>
           <Image source={require('./example.jpeg')} style={styles.big} />
         </EllipseView>
       </TouchableOpacity>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffa0f0',
   },
   big: {
-    width: 40,
-    height: 40,
+    width: 100,
+    height: 100,
   },
 });

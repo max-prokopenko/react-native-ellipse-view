@@ -17,4 +17,6 @@ NS_DESIGNATED_INITIALIZER;
 
 - (void) setBorderStyleParam:(NSString *)borderStyle;
 
+- (void) setCoeffParam:(double)roundnessCoeff;
+
 @end
